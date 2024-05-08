@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>IMAGDressing: Customizable Virtual Dressing</title>
+  <title>IMAGDressing</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,7 +52,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">IMAGDressing: Customizable Virtual Dressing</h1>
+		            <h1 class="title is-size-2 publication-title">
+            <font color="#FF0000">I</font><font color="#F0000F">M</font><font color="#E1001E">A</font><font color="#D2002D">G</font><font color="#C3003C">D</font><font color="#B4004B">r</font><font color="#A5005A">e</font><font color="#960069">s</font><font color="#870078">s</font><font color="#960069">i</font><font color="#960069">n</font><font color="#960069">g</font>
+            : Customizable Virtual Dressing
+          </h1>
+
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
 			  
@@ -90,27 +94,27 @@
 
 
                     <!-- Supplementary PDF link -->
-					<!-- 
+			
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="https://github.com/" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
+                        <i class="fab fa-github"></i>
                       </span>
-                      <span>Supplementary</span>
+                      <span>Code</span>
                     </a>
                   </span>
--->
+
 				
                   <!-- Github link -->
 		
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://huggingface.co/spaces/IMAG_AIGC/IMAGDressing" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i class="fa fa-smile"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Demo (Coming Soon)</span>
                   </a>
                 </span>
 
@@ -152,61 +156,65 @@
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <!-- End paper abstract -->
 
 
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+
+          <div class="content has-text-justified">
+            <p>
+xxxxxx这里写摘要.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+  </section>
+  
+  
 <!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+  </section>
+
+  <section class="method">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              这里更改下Given only one reference ID image, InstantID aims to generate customized images with various poses or styles from a single reference ID image while ensuring high fidelity. 
+              Following figure provides an overview of our method. It incorporates three crucial components: (1) An ID embedding that captures robust semantic face information; (2) A lightweight adapted module with decoupled cross-attention, facilitating the use of an image as a visual prompt; (3) An IdentityNet that encodes the detailed features from the reference facial image with additional spatial control.
+            </p>
+          </div>
+
+          <div class="container is-max-desktop">
+            <img src="./static/images/frameworkv1.png" alt="Image0" height="100%">
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              这里更改下We are different from previous works in the following aspects: (1) We do not train UNet, so we can preserve the generation ability of the original text-to-image model and be compatible with existing pre-trained models and ControlNets in the community; (2) We don't require test-time tuning, so for a specific character, there is no need to collect multiple images for fine-tuning, only a single image needs to be inferred once; (3) We achieve better face fidelity, and retain the editability of text.
+            </p>
+          </div>
+
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+      <!--/ Abstract. -->
     </div>
-  </div>
-</div>
-</div>
-</section>
+  </section>
 <!-- End image carousel -->
 
 
@@ -271,26 +279,11 @@
 
 
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>Anonymous Author</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
