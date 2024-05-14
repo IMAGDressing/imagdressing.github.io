@@ -57,11 +57,11 @@
             : Customizable Virtual Dressing
           </h1>
 
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-			        <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Author</a>
-                  </div>
+<!--            <div class="is-size-5 publication-authors">-->
+<!--              &lt;!&ndash; Paper authors &ndash;&gt;-->
+<!--			        <span class="author-block">-->
+<!--                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Author</a>-->
+<!--                  </div>-->
 
 					
                   <div class="is-size-5 publication-authors">
@@ -148,20 +148,20 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
+<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
+<!--        <source src="static/videos/banner_video.mp4"-->
+<!--        type="video/mp4">-->
+<!--      </video>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 <!-- End teaser video -->
 
 
@@ -180,7 +180,10 @@
 
           <div class="content has-text-justified">
             <p>
-xxxxxx这里写摘要.
+            We propose ReferenceAdapter, a latent diffusion model (LDM)-based network for the garment-driven image synthesis task. To generate customized characters wearing target clothing with text prompts, controllability is critical, ensuring clothing details are preserved and text prompts are faithfully followed.
+              We introduce a Clothing Net to capture detailed clothing features and integrate them into a pre-trained LDM using self-attention fusion, maintaining the clothing details on the target character. We then use a lightweight adapter module to balance the control of clothing features and text prompts. Additionally,
+              reference image features extracted by the image encoder are encoded into the Clothing Net using cross-attention fusion for more detailed clothing information. ReferenceAdapter is a plug-in module compatible with various fine-tuned LDMs and can be combined with extensions like ControlNet and IP-Adapter to enhance diversity and controllability.
+              ReferenceAdapter demonstrates excellent performance and efficiency, making it useful in real-world applications where preserving target garments is essential.
             </p>
           </div>
         </div>
@@ -203,8 +206,11 @@ xxxxxx这里写摘要.
 
           <div class="content has-text-justified">
             <p>
-              这里更改下Given only one reference ID image, InstantID aims to generate customized images with various poses or styles from a single reference ID image while ensuring high fidelity. 
-              Following figure provides an overview of our method. It incorporates three crucial components: (1) An ID embedding that captures robust semantic face information; (2) A lightweight adapted module with decoupled cross-attention, facilitating the use of an image as a visual prompt; (3) An IdentityNet that encodes the detailed features from the reference facial image with additional spatial control.
+              Given only one reference garment image, ReferenceAdapter aims to generate customized images with various poses or styles from a single reference garment image while ensuring high fidelity.
+              The following figure provides an overview of our method. It incorporates three crucial components:
+              (1) A Clothing Net that encodes the detailed features from the reference garment image into the denoising process via self-attention fusion;
+              (2) Reference garment features that capture robust semantic and spatial information are encoded into the Clothing Net via cross-attention fusion;
+              (3) A lightweight adapter module with decoupled self-attention, facilitating the use of a reference garment image as a visual prompt for denoising process.
             </p>
           </div>
 
@@ -214,7 +220,9 @@ xxxxxx这里写摘要.
 
           <div class="content has-text-justified">
             <p>
-              这里更改下We are different from previous works in the following aspects: (1) We do not train UNet, so we can preserve the generation ability of the original text-to-image model and be compatible with existing pre-trained models and ControlNets in the community; (2) We don't require test-time tuning, so for a specific character, there is no need to collect multiple images for fine-tuning, only a single image needs to be inferred once; (3) We achieve better face fidelity, and retain the editability of text.
+               We are different from previous works in the following aspects: (1) We do not train UNet, so we can preserve the generation ability of the original text-to-image model and be compatible with existing pre-trained models and ControlNets in the community;
+              (2) We use the reference garment image as a visual prompt for Clothing Net to obtain more fidelity reference garment features;
+              (3) We adopt a lightweight adapter module with decoupled self-attention to balance the control of garment features and text prompts.
             </p>
           </div>
 
@@ -280,57 +288,57 @@ xxxxxx这里写摘要.
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          -->
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title is-3">Another Carousel</h2>-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-video1">-->
+<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel1.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video2">-->
+<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel2.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video3">-->
+<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel3.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 <!-- End video carousel -->
 
 
@@ -339,32 +347,32 @@ xxxxxx这里写摘要.
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>Anonymous Author</code></pre>
-    </div>
-</section>
+<!--  <section class="section" id="BibTeX">-->
+<!--    <div class="container is-max-desktop content">-->
+<!--      <h2 class="title">BibTeX</h2>-->
+<!--      <pre><code>Anonymous Author</code></pre>-->
+<!--    </div>-->
+<!--</section>-->
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+<!--  <footer class="footer">-->
+<!--  <div class="container">-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-8">-->
+<!--        <div class="content">-->
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+<!--          <p>-->
+<!--            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.-->
+<!--            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative-->
+<!--            Commons Attribution-ShareAlike 4.0 International License</a>.-->
+<!--          </p>-->
 
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
 
 <!-- Statcounter tracking code -->
   
