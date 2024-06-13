@@ -53,7 +53,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
 		            <h1 class="title is-size-2 publication-title">
-            <font color="#FF0000">I</font><font color="#F0000F">M</font><font color="#E1001E">A</font><font color="#D2002D">G</font><font color="#C3003C">D</font><font color="#B4004B">r</font><font color="#A5005A">e</font><font color="#960069">s</font><font color="#870078">s</font><font color="#960069">i</font><font color="#960069">n</font><font color="#960069">g</font>
+            <font color="#FF0000">I</font><font color="#F0000F">M</font><font color="#E1001E">A</font><font color="#D2002D">G</font><font color="#C3003C">D</font><font color="#B4004B">r</font><font color="#A5005A">e</font><font color="#960069">s</font><font color="#870078">s</font><font color="#960069">i</font><font color="#960069">n</font><font color="#960069">g-v1</font>
             : Customizable Virtual Dressing
           </h1>
 
@@ -104,12 +104,12 @@
                     <!-- Supplementary PDF link -->
 			
                     <span class="link-block">
-                      <a href="https://github.com/" target="_blank"
+                      <a href="https://github.com/muzishen/IMAGDressing" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
-                      <span>Code (Coming Soon)</span>
+                      <span>Code</span>
                     </a>
                   </span>
 
@@ -117,12 +117,12 @@
                   <!-- Github link -->
 		
                   <span class="link-block">
-                    <a href="https://huggingface.co/spaces/IMAG_AIGC/IMAGDressing" target="_blank"
+                    <a href="https://sf.dictdoc.site/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fa fa-smile"></i>
                     </span>
-                    <span>Demo (Coming Soon)</span>
+                    <span>Demo</span>
                   </a>
                 </span>
 
@@ -190,60 +190,70 @@
   </section>
   
   
-<!-- Image carousel -->
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGDressing-v1 Features</title>
+</head>
+<body>
+    <!-- Image carousel -->
+    </section>
 
-  <section class="method">
-    <div class="container is-max-desktop">
-
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Method</h2>
-
-          <div class="content has-text-justified">
-            <p>
-              Given only one reference garment image, ReferenceAdapter aims to generate customized images with various poses or styles from a single reference garment image while ensuring high fidelity.
-              The following figure provides an overview of our method. It incorporates three crucial components:
-              (1) A Clothing Net that encodes the detailed features from the reference garment image into the denoising process via self-attention fusion;
-              (2) Reference garment features that capture robust semantic and spatial information are encoded into the Clothing Net via cross-attention fusion;
-              (3) A lightweight adapter module with decoupled self-attention, facilitating the use of a reference garment image as a visual prompt for denoising process.
-            </p>
-          </div>
-
-          <div class="container is-max-desktop">
-            <img src="./static/images/frameworkv1.png" alt="Image0" height="100%">
-          </div>
-
-          <div class="content has-text-justified">
-            <p>
-               We are different from previous works in the following aspects: (1) We do not train UNet, so we can preserve the generation ability of the original text-to-image model and be compatible with existing pre-trained models and ControlNets in the community;
-              (2) We use the reference garment image as a visual prompt for Clothing Net to obtain more fidelity reference garment features;
-              (3) We adopt a lightweight adapter module with decoupled self-attention to balance the control of garment features and text prompts.
-            </p>
-          </div>
-
+    <section class="method">
+        <div class="container is-max-desktop">
+            <!-- Abstract -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content has-text-justified">
+                        <ul>
+                            <li>Simple Architecture: IMAGDressing-v1 produces lifelike garments and enables easy user-driven scene editing.</li>
+                            <li>Flexible Plugin Compatibility: IMAGDressing-v1 modestly integrates with extension plugins such as IP-Adapter, ControlNet, T2I-Adapter, and AnimateDiff.</li>
+                            <li>Rapid Customization: Enables rapid customization in seconds without the need for additional LoRA training.</li>
+                        </ul>
+                    </div>
+                    <div class="container is-max-desktop">
+                        <img src="./static/images/pipeline.png" alt="Image0" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract -->
         </div>
-      </div>
-      <!--/ Abstract. -->
-    </div>
-  </section>
-<!-- End image carousel -->
-
-  <section class="section">
-    <div class="container is-max-desktop">
-
-      <!-- Base Version Results. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Put the Clothes on the Model</h2>
-
-          <div class="container is-max-desktop">
-            <img src="./static/images/base.png" alt="Image0" height="100%">
-          </div>
+    </section>
+    <!-- End image carousel -->
+<section class="section">
+        <div class="container is-max-desktop">
+            <!-- Base Version Results -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Compared with MagicClothing</h2>
+                    <div class="container is-max-desktop">
+                        <img src="./static/images/compare_magic.png" alt="Image0" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Base Version Results -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Put the Clothes on the Model</h2>
+                    <div class="container is-max-desktop">
+                        <img src="./static/images/base.png" alt="Image0" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
       <!--/ Base Version Results. -->
   </section>
 
@@ -353,27 +363,27 @@
 <!--End BibTex citation -->
 
 
-<!--  <footer class="footer">-->
-<!--  <div class="container">-->
-<!--    <div class="columns is-centered">-->
-<!--      <div class="column is-8">-->
-<!--        <div class="content">-->
+ <footer class="footer">
+ <div class="container">
+   <div class="columns is-centered">
+    <div class="column is-8">
+       <div class="content">
 
-<!--          <p>-->
-<!--            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.-->
-<!--            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative-->
-<!--            Commons Attribution-ShareAlike 4.0 International License</a>.-->
-<!--          </p>-->
+     <p>
+      This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+      You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+      Commons Attribution-ShareAlike 4.0 International License</a>.
+     </p>
 
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</footer>-->
+       </div>
+     </div>
+   </div>
+  </div>
+</footer>
 
 <!-- Statcounter tracking code -->
   
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+ You can add a tracker to track page visits by creating an account at statcounter.com 
 
     <!-- End of Statcounter Code -->
 
