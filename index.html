@@ -84,6 +84,9 @@
    <a href="https://scholar.google.com/citations?user=vs_MX8kAAAAJ&hl=en" target="_blank">Xiaoyu Du</a> <sup>1</sup><br>
   </span>
   <span class="author-block">
+    <a href="https://scholar.google.com/citations?user=vs_MX8kAAAAJ&hl=en" target="_blank">Ze chao Li</a> <sup>1</sup><br>
+   </span>
+  <span class="author-block">
     <a href="https://scholar.google.com.hk/citations?user=ByBLlEwAAAAJ&hl=en" target="_blank">Jinghui Tang</a> <sup>1</sup><br>
   </span>
 </div>
@@ -120,12 +123,12 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2407.12705" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Paper (Coming Soon)</span>
+                        <span>Paper</span>
                       </a>
                     </span>
 
@@ -209,7 +212,14 @@
 
           <div class="content has-text-justified">
             <p>
-           Recent advances in diffusion models have significantly improved virtual try-on systems for consumers by enabling realistic clothing swaps. However, existing methods overlook the need for flexible and controllable customizations required by merchants, such as scene, pose, and facial features. To address this gap, we propose IMAGDressing, which caters to both consumer and merchant customization requirements for virtual clothing generation. Specifically, we introduce a clothing UNet that captures semantic features from CLIP and texture features from VAE. We propose a hybrid attention module that includes a frozen self-attention and a trainable cross-attention, integrating clothing features into a frozen denoising UNet to ensure user-controlled editing. To address the lack of current task data, we release a comprehensive dataset, IGv1, containing over 200,000 pairs of clothing and dressed images, and establish a standard pipeline for data assembly. Furthermore, our proposed IMAGDressing-v1 can be combined with other extension plugins such as ControlNet, IP-Adapter, T2I-Adapter, and AnimateDiff to enhance the diversity and controllability of generated characters. Extensive experiments demonstrate that our IMAGDressing-v1 achieves state-of-the-art performance in human image synthesis under various controlled conditions.
+              Latest advances have achieved realistic virtual try-on (VTON) through localized garment inpainting using latent diffusion models, significantly enhancing consumers' online shopping experience. However, existing VTON technologies neglect the need for merchants to showcase garments comprehensively, including flexible control over garments, optional faces, poses, and scenes. To address this issue, we define a virtual dressing (VD) task focused on generating freely editable human images with fixed garments and optional conditions. Meanwhile, we design a comprehensive affinity metric index (CAMI) to evaluate the consistency between generated images and reference garments.
+              Then, we propose IMAGDressing-v1, which incorporates a garment UNet that captures semantic features from CLIP and texture features from VAE. 
+              We present a hybrid attention module, including a frozen self-attention and a trainable cross-attention, to integrate garment features from the garment UNet into a frozen denoising UNet, ensuring users can control different scenes through text. 
+              IMAGDressing-v1 can be combined with other extension plugins, such as ControlNet and IP-Adapter, to enhance the diversity and controllability of generated images. 
+              Furthermore, to address the lack of data, we release the interactive garment pairing (IGPair) dataset, containing over 300,000 pairs of clothing and dressed images, and establish a standard pipeline for data assembly.
+              Extensive experiments demonstrate that our IMAGDressing-v1 achieves state-of-the-art human image synthesis performance under various controlled conditions.
+              The code and model will be available at <a href="https://github.com/muzishen/IMAGDressing" style="font-weight: bold;">https://github.com/muzishen/IMAGDressing</a>.
+            </p>
             </p>
           </div>
         </div>
@@ -228,8 +238,22 @@
 </head>
 <body>
     <!-- Image carousel -->
-    </section>
 
+    <section class="section">
+      <div class="container is-max-desktop">
+          <!-- Base Version Results -->
+          <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Virtual try-on (VTON) <i>vs</i> virtual dressing (VD)</h2>
+                  <div class="container is-max-desktop">
+                      <img src="./static/images/example.png" alt="Image0" style="width: 100%;">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</body> 
+</html>
     <section class="method">
         <div class="container is-max-desktop">
             <!-- Abstract -->
@@ -239,8 +263,10 @@
                     <div class="content has-text-justified">
                         <ul>
                             <li>Simple Architecture: IMAGDressing-v1 produces lifelike garments and enables easy user-driven scene editing.</li>
+                            <li>New Task: Definition of virtual dressing (VD) Task and design a comprehensive affinity metric index (CAMI) metric</li>
                             <li>Flexible Plugin Compatibility: IMAGDressing-v1 modestly integrates with extension plugins such as IP-Adapter, ControlNet, T2I-Adapter, and AnimateDiff.</li>
                             <li>Rapid Customization: Enables rapid customization in seconds without the need for additional LoRA training.</li>
+                            <li>IGPair Dataset: Release a new interactive garment pairing (IGPair) dataset</li>
                         </ul>
                     </div>
                     <div class="container is-max-desktop">
@@ -284,7 +310,7 @@
             </div>
         </div>
     </section>
-</body>
+</body> 
 </html>
 
       <!--/ Base Version Results. -->
@@ -394,8 +420,8 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{shen2024IMAGDressing-v1,
   title={IMAGDressing-v1: Customizable Virtual Dressing},
-  author={Shen, Fei and Jiang, Xin and He, Xin and Ye, Hu and Wang, Cong, and Du, Xiaoyu, and Tang, Jinghui},
-  booktitle={Coming Soon},
+  author={Shen, Fei and Jiang, Xin and He, Xin and Ye, Hu and Wang, Cong, and Du, Xiaoyu, Zechao, Li and Tang, Jinghui},
+  booktitle={arXiv preprint arXiv:2407.12705},
   year={2024}
 }</code></pre>
   </div>
