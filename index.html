@@ -87,7 +87,7 @@
     <a href="https://scholar.google.com/citations?user=vs_MX8kAAAAJ&hl=en" target="_blank">Ze chao Li</a> <sup>1</sup><br>
    </span>
   <span class="author-block">
-    <a href="https://scholar.google.com.hk/citations?user=ByBLlEwAAAAJ&hl=en" target="_blank">Jinghui Tang</a> <sup>1</sup><br>
+    <a href="https://scholar.google.com.hk/citations?user=ByBLlEwAAAAJ&hl=en" target="_blank">Jinhui Tang</a> <sup>1</sup><br>
   </span>
 </div>
 
@@ -356,76 +356,90 @@
 
 
 
-<!-- Youtube video -->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--      <h2 class="title is-3">Video Presentation</h2>-->
-<!--      <div class="columns is-centered has-text-centered">-->
-<!--        <div class="column is-four-fifths">-->
-<!--          -->
-<!--          <div class="publication-video">-->
-<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
-<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!-- End youtube video -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>IMAGDressing-v1 Features</title>
+  </head>
+  <body>
+      <!-- Image carousel -->
+  
+      <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Base Version Results -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                  <h2 class="title is-3">Virtual try-on (VTON) <i>vs</i> virtual dressing (VD)</h2>
+                    <div class="container is-max-desktop">
+                        <img src="./static/images/example.png" alt="Image0" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- IGPair Dataset Description -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3">IGPair Dataset Demo</h2>
+            You can download at <a href="https://huggingface.co/datasets/IMAGDressing/IGPair" style="font-weight: bold;">https://huggingface.co/datasets/IMAGDressing/IGPair</a><br><br><br><br>
+
+            
+            <img src="./static/images/dataset_demo.png" width="96%" height="96%">
+  
+            <div class="content has-text-justified">
+                <h3 class="title is-4">IGPair Dataset</h3>
+                <p>
+                    IGPair includes multiple models for each clothing item. It is also the first dataset with a resolution exceeding 2k*2k. Additionally, IGPair is the first publicly available dataset that includes textual descriptions, diverse scenes, and various styles. Specifically, IGPair includes 86,873 garments. We categorize the garments into 18 types, and the dataset consists of 324,857 image pairs.
+                </p>
+                
+                <h3 class="title is-4">Data Structure</h3>
+                <p>
+                    Now we release the body mask (in folder <strong>'./body_mask/'</strong>), clothes (in folder <strong>'./clothes/'</strong>), densepose (in folder <strong>'./densepose/'</strong>), openpose (in folder <strong>'./openpose/'</strong>), IGPair Test Data (in folder <strong>'./IGPair_Test/'</strong>), and annotations (in folder <strong>'./IGPair.json/'</strong>) for IGPair.
+                </p>
+                <p>
+                    Each annotation adheres to the subsequent Parquet format specifications, including column names and corresponding content examples:
+                </p>
+                <pre><code>{
+      "text": "caption",
+      "image_file": "model_path",
+      "cloth_file": "cloth_path",
+      "cloth_type": "type"
+  }</code></pre>
+  
+                <h3 class="title is-4">Type Counter</h3>
+                <img src="./static/images/type_counter.png" width="96%" height="96%">
+  
+                <h3 class="title is-4">Test Set</h3>
+                <p>
+                    The test set includes 1600 upper-body cloth, 200 dress, and 200 lower-body cloth images in total. The image naming format is <strong>upper_body_00001.jpg</strong>, <strong>dress_01601.jpg</strong>, and <strong>lower_body_01801.jpg</strong>.
+                </p>
+  
+                <h3 class="title is-4">Download Instructions</h3>
+                <pre><code>
+          
+                cd IGPair/IGPair_dataset
+                cat IGPair.zip.* > IGPair.zip
+              </code></pre>
+  
+                <h3 class="title is-4">Citation Information</h3>
+                <pre><code>@article{shen2024IMAGDressing-v1,
+    title={IMAGDressing-v1: Customizable Virtual Dressing},
+    author={Shen, Fei and Jiang, Xin and He, Xin and Ye, Hu and Wang, Cong, and Du, Xiaoyu, Zechao, Li and Tang, Jinhui},
+    booktitle={arXiv preprint arXiv:2407.12705},
+    year={2024}
+  }</code></pre>
+            </div>
+        </div>
+    </section>
+  </body>
+  </html>
+  
 
 
-<!-- Video carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title is-3">Another Carousel</h2>-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-video1">-->
-<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel1.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video2">-->
-<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel2.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video3">-->
-<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel3.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!-- End video carousel -->
 
-
-
-
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{shen2024IMAGDressing-v1,
-  title={IMAGDressing-v1: Customizable Virtual Dressing},
-  author={Shen, Fei and Jiang, Xin and He, Xin and Ye, Hu and Wang, Cong, and Du, Xiaoyu, Zechao, Li and Tang, Jinghui},
-  booktitle={arXiv preprint arXiv:2407.12705},
-  year={2024}
-}</code></pre>
-  </div>
-</section>
 
 
 
